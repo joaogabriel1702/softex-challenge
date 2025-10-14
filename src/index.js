@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import { splitGames } from './splitGames.js';
 import { parseGameLines } from './gameParser.js';
+import { generateReport } from './reportGenerator.js';
 
 async function main() {
   const args = process.argv.slice(2);
@@ -20,9 +21,7 @@ async function main() {
     return { [`game_${i + 1}`]: result };
   });
 
-  for (const game of parsedGames) {
-    console.log(JSON.stringify(game, null, 2));
-  }
+  generateReport(parsedGames);
 }
 
 main();
