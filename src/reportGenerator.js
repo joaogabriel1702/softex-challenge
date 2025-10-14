@@ -1,6 +1,6 @@
 export function generateReport(parsedGames) {
   console.log('\n==============================');
-  console.log('📊 RELATÓRIO DE JOGOS');
+  console.log('RELATÓRIO DE JOGOS');
   console.log('==============================\n');
 
   const globalRanking = {};
